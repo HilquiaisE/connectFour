@@ -1,9 +1,11 @@
 package game.tabuleiro;
 
+import java.util.Scanner;
+
 public class Tabuleiro {
 	
-	private int linha;
-	private int coluna;
+	private int linha = 7;
+	private int coluna = 15;
 	private String[][] tabuleiro;
 	
 	public Tabuleiro() {
@@ -35,7 +37,7 @@ public class Tabuleiro {
 	}
 	
 	public String[][] criarTabuleiro(){
-		String[][] tabuleiro = new String[7][15];
+		String[][] tabuleiro = new String[linha][coluna];
 		 
 	    for (int i = 0; i < tabuleiro.length; i++) {
 	       for (int j = 0; j < tabuleiro[i].length; j++) {
@@ -58,6 +60,19 @@ public class Tabuleiro {
 	        System.out.print(tabuleiro[i][j]);
 	      }
 	      System.out.println();
+	    }
+	  }
+	
+	public void jogadaPlayer1(String[][] tabuleiro) {
+	    System.out.print("Escolha uma coluna para jogar (0–6): ");
+	    Scanner scan = new Scanner (System.in);
+	    int c = 2*scan.nextInt()+1;
+	    scan.close();
+	    for (int i =5;i>=0;i--) {
+	      if (tabuleiro[i][c] == " ") {
+	        tabuleiro[i][c] = "R";
+	        break;
+	      }
 	    }
 	  }
 }

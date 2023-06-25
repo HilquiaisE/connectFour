@@ -8,6 +8,10 @@ public class Jogo {
 		Tabuleiro game = new Tabuleiro();
 		str = game.criarTabuleiro();
 		game.mostrarTabuleiro(str);
+		
+		while(true) {
+			game.jogadaPlayer1(str);
+			game.mostrarTabuleiro(str);
+		}
 	}
-
 }
