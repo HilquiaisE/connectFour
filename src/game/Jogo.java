@@ -1,6 +1,7 @@
 package game;
 
-import game.tabuleiro.*;
+import tabuleiro.Tabuleiro;
+
 public class Jogo {
 
 	public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Jogo {
 		game.mostrarTabuleiro(str);
 		
 		while(true) {
-			game.jogadaPlayer1(str);
+			game.jogada(str);
 			game.mostrarTabuleiro(str);
 		}
 	}
