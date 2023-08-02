@@ -8,7 +8,7 @@ O Jogo Lig 4 - Estrela, é um clássico jogo de raciocínio e estratégia. Em um
 ## Diagrama de Classes 
 
 <div>
-<img src="https://github.com/HilquiaisE/connectFour/assets/115379781/adab4275-bada-43bf-ab10-7fa645cbe07a" width="500px" />
+<img src="https://github.com/HilquiaisE/connectFour/assets/115379781/e15ecde2-0761-47d9-a97f-dd6015f9ab75.png" width="500px" />
 </div>
 
 # Tecnologias utilizadas
