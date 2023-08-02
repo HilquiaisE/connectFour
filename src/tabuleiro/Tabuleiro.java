@@ -7,7 +7,7 @@ public class Tabuleiro {
 	private int linha;
 	private int coluna;
 	private String[][] tabuleiro;
-	private String jogador;
+	protected String jogador;
 
 	public Tabuleiro() {
 		linha = 7;
@@ -17,6 +17,10 @@ public class Tabuleiro {
 
 	public String getJogador() {
 		return jogador;
+	}
+
+	public void setJogador(String jogador) {
+		this.jogador = jogador;
 	}
 
 	public int getLinha() {
@@ -57,8 +61,7 @@ public class Tabuleiro {
 				if (i == 6)
 					tabuleiro[i][j] = "-";
 			}
-
-		}
+		}	
 		return tabuleiro;
 	}
 
@@ -69,9 +72,13 @@ public class Tabuleiro {
 			}
 			System.out.println();
 		}
+		System.out.println(" 0 1 2 3 4 5 6");
+		
+		System.out.println();
+		System.out.println("Ecolha uma casa de 0-6: ");
 	}
 
-	private void nextTurn() {
+	protected void nextTurn() {
 		if (jogador == "R") {
 			jogador = "B";
 		} else {
