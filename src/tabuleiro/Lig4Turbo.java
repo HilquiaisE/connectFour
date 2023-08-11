@@ -7,8 +7,8 @@ public class Lig4Turbo extends Tabuleiro {
 	public Lig4Turbo() {
 	}
 
+	@Override
 	public void jogada(String[][] tabuleiro) {
-	//	Tabuleiro game = new Tabuleiro();
 		Scanner sc = new Scanner(System.in);
 		int c = 2 * sc.nextInt() + 1;
 
@@ -32,6 +32,7 @@ public class Lig4Turbo extends Tabuleiro {
 				break;
 			}
 		}
+		verificarVitoria(tabuleiro);
 		nextTurn();
 	}
 }
