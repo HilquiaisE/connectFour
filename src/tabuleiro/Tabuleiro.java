@@ -81,8 +81,8 @@ public abstract class Tabuleiro {
 		System.out.println();
 		System.out.println("Ecolha uma casa de 0-6: ");
 	}
-
-	protected void nextTurn() {
+	
+	public void nextTurn() {
 		if (jogador == "R") {
 			jogador = "B";
 		} else {
@@ -90,11 +90,8 @@ public abstract class Tabuleiro {
 		}
 		
 		turn++;
-	}
-
-	public abstract void jogada(String[][] tabuleiro);
-		
-
+	}	
+	
 	public String verificarVitoria(String[][] tabuleiro) {
 
 		for (int i = 0; i < 6; i++) {

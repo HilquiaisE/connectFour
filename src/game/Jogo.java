@@ -1,16 +1,16 @@
 package game;
 
-import tabuleiro.Lig4;
+import tabuleiro.Lig4TurboMaluco;
 
 public class Jogo {
 
 	public static void main(String[] args) {
 		String[][] str = new String[7][15];
-		Lig4 game2 = new Lig4();
+		Lig4TurboMaluco game2 = new Lig4TurboMaluco();
 		str = game2.criarTabuleiro();
 		game2.mostrarTabuleiro(str);
 
-		while (game2.verificarVitoria(str) == null || game2.getTurn() < 42) {
+		while (game2.verificarVitoria(str) == null) {
 			game2.jogada(str);
 			game2.mostrarTabuleiro(str);
 		}
