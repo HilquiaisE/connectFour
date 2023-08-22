@@ -46,7 +46,7 @@ public abstract class Tabuleiro {
 	public void setTabuleiro(String[][] tabuleiro) {
 		this.tabuleiro = tabuleiro;
 	}
-	
+
 	public int getTurn() {
 		return turn;
 	}
@@ -81,28 +81,25 @@ public abstract class Tabuleiro {
 		System.out.println();
 		System.out.println("Ecolha uma casa de 0-6: ");
 	}
-	
+
 	public void nextTurn() {
 		if (jogador == "R") {
 			jogador = "B";
 		} else {
 			jogador = "R";
 		}
-		
+
 		turn++;
-	}	
-	
+	}
+
 	public String verificarVitoria(String[][] tabuleiro) {
 
 		for (int i = 0; i < 6; i++) {
 			for (int j = 0; j < 7; j += 2) {
-				if ((tabuleiro[i][j + 1] != " ") 
-						&& (tabuleiro[i][j + 3] != " ") 
-						&& (tabuleiro[i][j + 5] != " ") 
+				if ((tabuleiro[i][j + 1] != " ") && (tabuleiro[i][j + 3] != " ") && (tabuleiro[i][j + 5] != " ")
 						&& (tabuleiro[i][j + 7] != " ")
-						&& ((tabuleiro[i][j + 1] == tabuleiro[i][j + 3]) 
-						&& (tabuleiro[i][j + 3] == tabuleiro[i][j + 5])
-						&& (tabuleiro[i][j + 5] == tabuleiro[i][j + 7])))
+						&& ((tabuleiro[i][j + 1] == tabuleiro[i][j + 3]) && (tabuleiro[i][j + 3] == tabuleiro[i][j + 5])
+								&& (tabuleiro[i][j + 5] == tabuleiro[i][j + 7])))
 
 					return tabuleiro[i][j + 1];
 			}
@@ -110,39 +107,32 @@ public abstract class Tabuleiro {
 
 		for (int i = 1; i < 15; i += 2) {
 			for (int j = 0; j < 3; j++) {
-				if ((tabuleiro[j][i] != " ") 
-						&& (tabuleiro[j + 1][i] != " ") 
-						&& (tabuleiro[j + 2][i] != " ") 
+				if ((tabuleiro[j][i] != " ") && (tabuleiro[j + 1][i] != " ") && (tabuleiro[j + 2][i] != " ")
 						&& (tabuleiro[j + 3][i] != " ")
-						&& ((tabuleiro[j][i] == tabuleiro[j + 1][i]) 
-						&& (tabuleiro[j + 1][i] == tabuleiro[j + 2][i]) 
-						&& (tabuleiro[j + 2][i] == tabuleiro[j + 3][i])))
+						&& ((tabuleiro[j][i] == tabuleiro[j + 1][i]) && (tabuleiro[j + 1][i] == tabuleiro[j + 2][i])
+								&& (tabuleiro[j + 2][i] == tabuleiro[j + 3][i])))
 					return tabuleiro[j][i];
 			}
 		}
 
 		for (int i = 0; i < 3; i++) {
 			for (int j = 1; j < 9; j += 2) {
-				if ((tabuleiro[i][j] != " ") 
-						&& (tabuleiro[i + 1][j + 2] != " ") 
-						&& (tabuleiro[i + 2][j + 4] != " ") 
+				if ((tabuleiro[i][j] != " ") && (tabuleiro[i + 1][j + 2] != " ") && (tabuleiro[i + 2][j + 4] != " ")
 						&& (tabuleiro[i + 3][j + 6] != " ")
-						&& ((tabuleiro[i][j] == tabuleiro[i + 1][j + 2]) 
-						&& (tabuleiro[i + 1][j + 2] == tabuleiro[i + 2][j + 4])
-						&& (tabuleiro[i + 2][j + 4] == tabuleiro[i + 3][j + 6])))
+						&& ((tabuleiro[i][j] == tabuleiro[i + 1][j + 2])
+								&& (tabuleiro[i + 1][j + 2] == tabuleiro[i + 2][j + 4])
+								&& (tabuleiro[i + 2][j + 4] == tabuleiro[i + 3][j + 6])))
 					return tabuleiro[i][j];
 			}
 		}
-		
+
 		for (int i = 0; i < 3; i++) {
 			for (int j = 7; j < 15; j += 2) {
-				if ((tabuleiro[i][j] != " ") 
-						&& (tabuleiro[i + 1][j - 2] != " ") 
-						&& (tabuleiro[i + 2][j - 4] != " ") 
+				if ((tabuleiro[i][j] != " ") && (tabuleiro[i + 1][j - 2] != " ") && (tabuleiro[i + 2][j - 4] != " ")
 						&& (tabuleiro[i + 3][j - 6] != " ")
-						&& ((tabuleiro[i][j] == tabuleiro[i + 1][j - 2]) 
-						&& (tabuleiro[i + 1][j - 2] == tabuleiro[i + 2][j - 4])
-						&& (tabuleiro[i + 2][j - 4] == tabuleiro[i + 3][j - 6])))
+						&& ((tabuleiro[i][j] == tabuleiro[i + 1][j - 2])
+								&& (tabuleiro[i + 1][j - 2] == tabuleiro[i + 2][j - 4])
+								&& (tabuleiro[i + 2][j - 4] == tabuleiro[i + 3][j - 6])))
 					return tabuleiro[i][j];
 			}
 		}
